@@ -9,40 +9,33 @@ namespace thread_test
 {
     class Program
     {
+        static Thread thread1;
         static void Main(string[] args)
         {
-            TestT tt = new TestT();
-            Thread thread = new Thread(new ThreadStart(tt.run));
+            
+            TestT tt1 = new TestT();
+            thread1 = new Thread(tt1.state_test);
 
-            thread.Start();
-            while (true)
-            {
-                Console.Write("입력 : ");
-                TestT.count = int.Parse( Console.ReadLine());
-
-                if (thread.ThreadState == ThreadState.Aborted && TestT.count == 5)
-                    thread.Resume();
-            }
+            thread1.Start();
         }
 
-
+        
 
     }
 
     class TestT
     {
         public static int count = 0;
-        public void run()
-        {
 
+        
+
+        public void state_test()
+        {
             while (true)
             {
-                Console.WriteLine($"run의 카운트 = {count}");
-                Thread.Sleep(1000);
+                Console.WriteLine(Thread.CurrentThread.CurrentUICulture.Name.ToString());
+                Thread.Sleep(2000);
 
-
-                if (count == 3)
-                    Thread.CurrentThread.();
             }
         }
     }
