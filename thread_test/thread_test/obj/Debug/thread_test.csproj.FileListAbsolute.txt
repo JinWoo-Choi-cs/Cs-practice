@@ -1,0 +1,7 @@
+C:\_work\_git\cs_project\thread_test\thread_test\bin\Debug\thread_test.exe.config
+C:\_work\_git\cs_project\thread_test\thread_test\bin\Debug\thread_test.exe
+C:\_work\_git\cs_project\thread_test\thread_test\bin\Debug\thread_test.pdb
+C:\_work\_git\cs_project\thread_test\thread_test\obj\Debug\thread_test.csprojAssemblyReference.cache
+C:\_work\_git\cs_project\thread_test\thread_test\obj\Debug\thread_test.csproj.CoreCompileInputs.cache
+C:\_work\_git\cs_project\thread_test\thread_test\obj\Debug\thread_test.exe
+C:\_work\_git\cs_project\thread_test\thread_test\obj\Debug\thread_test.pdb
