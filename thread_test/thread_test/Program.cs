@@ -9,18 +9,33 @@ namespace thread_test
 {
     class Program
     {
+        volatile int a;
         static Thread thread1;
         static void Main(string[] args)
         {
-            
+            int count = 0;
             TestT tt1 = new TestT();
-            thread1 = new Thread(tt1.state_test);
+            thread1 = new Thread(tt1.State_test);
 
-            thread1.Start();
+            Thread thread2 = new Thread(tt1.State_test);
+            while (true)
+            {
+                Console.WriteLine(thread1.ThreadState.ToString());
+                Thread.Sleep(100);
+                if (count == 10)
+                    thread1.Start();
+                count++;
+
+                thread1.Interrupt();
+
+                if (thread1.ThreadState == ThreadState.Stopped)
+                {
+                    Console.WriteLine("끝");
+                    break;
+                }
+            }
         }
-
         
-
     }
 
     class TestT
@@ -29,15 +44,30 @@ namespace thread_test
 
         
 
-        public void state_test()
+        public void State_test()
         {
+            int count = 0;
             while (true)
             {
-                Console.WriteLine(Thread.CurrentThread.CurrentUICulture.Name.ToString());
-                Thread.Sleep(2000);
+                try
+                {
+                    Thread.Sleep(1);
+                    //count++;
+                    //if (count == 50)
+                    //    Thread.CurrentThread.Abort();
+                    
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("\n"+e.ToString()+"\n");
 
+                    Thread.ResetAbort();
+                    
+                }
             }
         }
+
+
     }
 
 

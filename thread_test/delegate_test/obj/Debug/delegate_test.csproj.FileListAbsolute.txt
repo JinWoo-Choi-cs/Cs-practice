@@ -1,0 +1,7 @@
+C:\_work\_git\cs_project\thread_test\delegate_test\bin\Debug\delegate_test.exe.config
+C:\_work\_git\cs_project\thread_test\delegate_test\bin\Debug\delegate_test.exe
+C:\_work\_git\cs_project\thread_test\delegate_test\bin\Debug\delegate_test.pdb
+C:\_work\_git\cs_project\thread_test\delegate_test\obj\Debug\delegate_test.csprojAssemblyReference.cache
+C:\_work\_git\cs_project\thread_test\delegate_test\obj\Debug\delegate_test.csproj.CoreCompileInputs.cache
+C:\_work\_git\cs_project\thread_test\delegate_test\obj\Debug\delegate_test.exe
+C:\_work\_git\cs_project\thread_test\delegate_test\obj\Debug\delegate_test.pdb
