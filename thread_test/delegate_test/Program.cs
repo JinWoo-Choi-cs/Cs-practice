@@ -41,7 +41,6 @@ namespace CsharpStudy
                 };
             chaincall();
 
-            Delegate.Remove(
         }
     }
 }
